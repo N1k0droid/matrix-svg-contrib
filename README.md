@@ -15,7 +15,7 @@ Instead of standard contribution graphs, `matrix-svg-contrib` animates your GitH
 * ⚡ **Phosphor Green Lock-In:** Contribution days fall down with the rain and lock permanently into place.
 * 🌓 **Dark & Light Mode Support:** Automatic theme switching with calibrated high-contrast light mode.
 * 📌 **Two Layout Versions:**
-  * **V1 (Minimal):** Clean $53 \times 7$ grid without surrounding text labels.
+  * **V1 (Minimal):** Clean 53×7 grid without surrounding text labels.
   * **V2 (Expanded):** Includes month and weekday phosphor text legends (`S`, `M`, `T`, `W`, `T`, `F`, `S`).
 * ⚙️ **Fully Customizable:** Easily tweak cell sizes, padding, animation speeds, and color palettes via `config.ts`.
 
@@ -69,7 +69,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Generate Matrix SVGs
-        uses: N1k0droid/matrix-svg-contrib@main
+        uses: N1k0droid/matrix-svg-contrib@v1.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
