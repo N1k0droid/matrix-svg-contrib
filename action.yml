@@ -1,0 +1,34 @@
+name: 'Matrix SVG Contribution Generator'
+description: 'Generate an animated Matrix rain contribution graph SVG (V1 & V2) for your GitHub Profile README.'
+author: 'N1k0droid'
+branding:
+  icon: 'grid'
+  color: 'green'
+
+inputs:
+  github_token:
+    description: 'GitHub Token to query contributions GraphQL API'
+    required: true
+  user_name:
+    description: 'GitHub Username'
+    required: false
+    default: '${{ github.repository_owner }}'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 22
+
+    - name: Install Dependencies
+      shell: bash
+      run: npm install --prefix ${{ github.action_path }}
+
+    - name: Generate Matrix SVGs
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ inputs.github_token }}
+        GITHUB_USERNAME: ${{ inputs.user_name }}
+      run: npx tsx ${{ github.action_path }}/scripts/generate-matrix-svg.ts

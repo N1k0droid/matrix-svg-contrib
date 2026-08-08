@@ -1,0 +1,29 @@
+{
+  "name": "matrix-svg-contrib",
+  "version": "1.0.0",
+  "description": "Generate custom animated Matrix rain contribution graph SVGs (V1 & V2) for your GitHub Profile README.",
+  "main": "scripts/generate-matrix-svg.ts",
+  "type": "module",
+  "scripts": {
+    "generate": "tsx scripts/generate-matrix-svg.ts"
+  },
+  "keywords": [
+    "github-action",
+    "github-profile",
+    "matrix-rain",
+    "svg-generator",
+    "contribution-graph",
+    "readme"
+  ],
+  "author": "N1k0droid",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/N1k0droid/matrix-svg-contrib.git"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}
